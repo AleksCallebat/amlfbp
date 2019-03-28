@@ -1,0 +1,1 @@
+- python 3.5 : YAML version, due to azureml installation not being possible. Solution : conda create --name py36 python=3.6 //conda activate py36
