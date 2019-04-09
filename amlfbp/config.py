@@ -27,12 +27,12 @@ def config(subscription_id=None,resource_group=None,workspace_name=None,region=N
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--subscription_id','-s',help='id of the subscription on which the service will be provider')
-    ap.add_argument('--resource_group','-g',help='id of the resource group on which the service will be provider')
-    ap.add_argument('--workspace_name','-w',help='id of the workspace')
+    ap.add_argument('--resource_group','-g',help='id of the resource group on which the service will be provider',default="amlfbp")
+    ap.add_argument('--workspace_name','-w',help='id of the workspace',default="default")
     ap.add_argument('--region','-r',help='Azure region where the compute happens',default="westeurope")
-    ap.add_argument('--cluster_name','-c',help='name of the cluster on which to work')
+    ap.add_argument('--cluster_name','-c',help='name of the cluster on which to work',default="basic")
     ap.add_argument('--vm_size',help='type of VM on which to run the compute',default="STANDARD_D2_V2")
-    ap.add_argument('--max_nodes','-n',help='maximum number of nodes allowed on the cluster',default=1)
+    ap.add_argument('--max_nodes','-n',help='maximum number of nodes allowed on the cluster',default=2)
 
     args = vars(ap.parse_args())
     if os.path.isfile("cluster_config.json") :
