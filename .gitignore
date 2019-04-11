@@ -3,4 +3,5 @@
 !amlfbp/*.py
 !my_tests/*.ppy
 !my_tests/sample_scripts/**
+!my_tests/sample_scripts/*/*.py
 !README.md
