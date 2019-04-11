@@ -2,6 +2,6 @@
 !.gitignore
 !amlfbp/*.py
 !my_tests/*.ppy
-!my_tests/sample_scripts/**
-!my_tests/sample_scripts/sklearn
+!my_tests/sample_scripts/*
+!my_tests/sample_scripts/sklearn/
 !README.md
