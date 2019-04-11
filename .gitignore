@@ -3,5 +3,5 @@
 !amlfbp/*.py
 !my_tests/*.ppy
 !my_tests/sample_scripts/**
-!my_tests/sample_scripts/sklearn/*.py
+!my_tests/sample_scripts/sklearn
 !README.md
