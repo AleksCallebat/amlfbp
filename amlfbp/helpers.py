@@ -1,3 +1,5 @@
+# HELPER FUNCTION THAT HELP THE INITIAL CONFIGURATION
+
 def create_workspace(subscription_id,resource_group,workspace_name,region):
     if subscription_id is None :
         subscription_id=input("enter your subscription id : ")

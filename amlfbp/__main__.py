@@ -23,12 +23,14 @@ def main():
     ap.add_argument('--workspace_name','-w',help='id of the workspace',default="default")
     ap.add_argument('--vm_size',help='type of VM on which to run the compute',default="STANDARD_D2_V2")
     ap.add_argument('--max_nodes','-n',help='maximum number of nodes allowed on the cluster',default=2)
+    ap.add_argument('--dependencies',help='list of the dependencies to install through pip install')
+    ap.add_argument('--script_params',default={})
 
     args = vars(ap.parse_args())
 
     import json 
     if os.path.isfile("config.json") :
-        if input("found a local config.json, do you want to continue with it? (y/n)")=="y":            
+        if input("Found an existing config.json, do you want to continue with it? (y/n)")=="y":            
             with open("config.json") as jsondata :
                 localargs=json.load(jsondata)
 

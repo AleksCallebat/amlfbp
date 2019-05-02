@@ -5,12 +5,8 @@ from helpers import *
 import json
 import argparse
 
-logging.info("This script was created using version 1.0.10 of the Azure ML SDK")
-logging.info("You are currently using version", azureml.core.VERSION, "of the Azure ML SDK")
-
-
-
 def config(args):
+    #FUNCTION THAT DOES THE CONFIGURATION OF THE RESSOURCES
     subscription_id,resource_group,workspace_name,region,cluster_name,vm_size,max_nodes=args["subscription_id"],args["resource_group"],args["workspace_name"],args["region"],args["cluster_name"],args["vm_size"],args["max_nodes"]
     try : 
         from azureml.core import Workspace
@@ -25,6 +21,7 @@ def config(args):
     return ws,cluster
 
 def main(args):
+    # CHECKS WHETHER CONFIG FILE ALREADY EXIST AND CONFIGs
     if os.path.isfile("cluster_config.json") :
         if __name__!="__main__" or input("found a local cluster_config.json, do you want to continue with it? (y/n)")=="y" :            
             import json 
